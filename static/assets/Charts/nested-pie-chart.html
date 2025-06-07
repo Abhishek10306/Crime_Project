@@ -27,7 +27,8 @@
 
   <script>
 
-    s = "/static/assets/data/fulljsondata2012.json";
+    //s = "/static/assets/data/fulljsondata2012.json";
+    s = "/static/assets/data/full_dataset.json";
     function readTextFile(file, callback) {
       var rawFile = new XMLHttpRequest();
       rawFile.overrideMimeType("application/json");
@@ -53,7 +54,7 @@
         for (j = 0; j < state_arr.length; j++) {
           var brr = [];
           for (k = 0; k < data.length; k++) {
-            if (data[k].YEAR == year_arr[i] && data[k].STATE_UT == state_arr[j]) {
+            if (data[k].YEAR == year_arr[i] && data[k].STATE == state_arr[j]) {
               brr.push(data[k][crime]);
             }
           }

@@ -12,7 +12,9 @@
 <body>
   <div id='myChart'></div>
   <script>
-    s = "/static/assets/data/fulljsondata2012.json";
+    //s = "/static/assets/data/fulljsondata2012.json";
+    s = "/static/assets/data/full_dataset.json";
+    
     function readTextFile(file, callback) {
       var rawFile = new XMLHttpRequest();
       rawFile.overrideMimeType("application/json");
@@ -44,7 +46,7 @@
         var j;
         for (j = 0; j < data.length; j++) {
 
-          if (String(data[j].YEAR) == year && data[j].STATE_UT == state_arr[i]) {
+          if (String(data[j].YEAR) == year && data[j].STATE == state_arr[i]) {
             var element = {};
             element.text = state_arr[i];
             element.values = [data[j][crime]];

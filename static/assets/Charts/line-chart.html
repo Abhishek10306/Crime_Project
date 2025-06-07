@@ -28,7 +28,8 @@
 <body>
   <div id='myChart'><a class="zc-ref" href="https://www.zingchart.com/">Powered by ZingChart</a></div>
   <script>
-    s = "/static/assets/data/fulljsondata2012.json";
+    //s = "/static/assets/data/fulljsondata2012.json";
+    s = "/static/assets/data/full_dataset.json";
 
 
     // function for reading json file
@@ -46,42 +47,42 @@
 
     readTextFile(s, function (text) {
       var data = JSON.parse(text);
-      //console.log(data);
-
-      
-
-      var year_arr = [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012]
-      var state_arr = [ "KERALA", "BIHAR",  "PUNJAB"]
-
-      // var retrievedObject = localStorage.getItem('testObject');
-
-      // obj = JSON.parse(retrievedObject)
-
-
-      // var state_arr = obj.state;
-      // var year_arr = obj.year;
+      console.log("???????????????????????");
+      console.log(data);
 
 
 
+      //var year_arr = [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012]
+      //var state_arr = ["KERALA", "BIHAR", "PUNJAB"]
 
-     // console.log(data, "line-chart");
+      var retrievedObject = localStorage.getItem('testObject');
 
- //     console.log(data.STATE_UT, "line-chart");
+      obj = JSON.parse(retrievedObject)
+
+
+      var state_arr = obj.state;
+      var year_arr = obj.year;
+
+
+
+
+      console.log(data, "line-chart");
+      console.log(data.STATE, "line-chart");
 
 
       var arr = []
 
       var i;
       for (i = 0; i < state_arr.length; i++) {
-      //  console.log(state_arr[i]);
+        //  console.log(state_arr[i]);
         for (j = 0; j < year_arr.length; j++) {
-        //  console.log(year_arr[j]);
+          //  console.log(year_arr[j]);
           var brr = []
           for (k = 0; k < data.length; k++) {
-            if (data[k].YEAR == year_arr[j] && data[k].STATE_UT == state_arr[i]) {
-           //   console.log(data[k].MURDER, state_arr[i], year_arr[j], "test1");
+            if (data[k].YEAR == year_arr[j] && data[k].STATE == state_arr[i]) {
+              //   console.log(data[k].MURDER, state_arr[i], year_arr[j], "test1");
               brr.push(data[k].MURDER);
-             // console.log(brr, "brr");
+              // console.log(brr, "brr");
             }
 
           }
@@ -92,7 +93,7 @@
       }
 
 
-    //  console.log(arr);
+      //  console.log(arr);
 
 
       var series_new = [];

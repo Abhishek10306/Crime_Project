@@ -30,7 +30,9 @@
 <body>
   <div id='myChart'><a class="zc-ref" href="https://www.zingchart.com/"></a></div>
   <script>
-    s = "/static/assets/data/fulljsondata2012.json";
+    //s = "/static/assets/data/fulljsondata2012.json";
+    s = "/static/assets/data/full_dataset.json";
+
     function readTextFile(file, callback) {
       var rawFile = new XMLHttpRequest();
       rawFile.overrideMimeType("application/json");
@@ -64,7 +66,7 @@
         for (j = 0; j < year_arr.length; j++) {
           var brr = []
           for (k = 0; k < data.length; k++) {
-            if (data[k].YEAR == year_arr[j] && data[k].STATE_UT == state_arr[i]) {
+            if (data[k].YEAR == year_arr[j] && data[k].STATE == state_arr[i]) {
               brr.push(data[k][crime]);
             }
             
