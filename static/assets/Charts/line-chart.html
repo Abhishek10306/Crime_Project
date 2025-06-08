@@ -44,9 +44,9 @@
       }
       rawFile.send(null);
     }
-
     readTextFile(s, function (text) {
       var data = JSON.parse(text);
+
       console.log("???????????????????????");
       console.log(data);
 
@@ -59,15 +59,14 @@
 
       obj = JSON.parse(retrievedObject)
 
-
+      console.log(obj);
       var state_arr = obj.state;
       var year_arr = obj.year;
-
-
-
+      
 
       console.log(data, "line-chart");
-      console.log(data.STATE, "line-chart");
+
+      //console.log(data["STATE"], "line-chart");
 
 
       var arr = []
@@ -79,6 +78,7 @@
           //  console.log(year_arr[j]);
           var brr = []
           for (k = 0; k < data.length; k++) {
+            console.log(data[k]);
             if (data[k].YEAR == year_arr[j] && data[k].STATE == state_arr[i]) {
               //   console.log(data[k].MURDER, state_arr[i], year_arr[j], "test1");
               brr.push(data[k].MURDER);

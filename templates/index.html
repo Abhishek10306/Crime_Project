@@ -13,10 +13,10 @@
 
 
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script> 
-  <script src="http://www.skulpt.org/js/skulpt.min.js" type="text/javascript"></script> 
-  <script src="http://www.skulpt.org/js/skulpt-stdlib.js" type="text/javascript"></script> 
-  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
+  <script src="http://www.skulpt.org/js/skulpt.min.js" type="text/javascript"></script>
+  <script src="http://www.skulpt.org/js/skulpt-stdlib.js" type="text/javascript"></script>
+
 
 
   <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
@@ -97,14 +97,20 @@
       } else if (document.getElementById('2011-check').checked == true) {
         document.getElementById('dropdownMenuButton').innerHTML = '2011';
         s = "{{url_for('static',filename='assets/data/fulldata2011.json')}}";
-      } else if (document.getElementById('2012-check').checked == true) {
+      } 
+      else if (document.getElementById('2012-check').checked == true) {
         document.getElementById('dropdownMenuButton').innerHTML = '2012';
         s = "{{url_for('static',filename='assets/data/fulldata2012.json')}}";
-      } else {
+      } 
+      else if (document.getElementById('2013-check').checked == true) {
+        document.getElementById('dropdownMenuButton').innerHTML = '2013';
+        s = "{{url_for('static',filename='assets/data/Crimes_2013.json')}}";
+      } 
+      else {
         s = "{{url_for('static',filename='assets/data/fulldata2011.json')}}";
       }
 
-        console.log(n, s);
+      console.log(n, s);
 
 
       document.getElementById('myGrid').innerHTML = '';
@@ -125,7 +131,7 @@
 
       readTextFile(s, function (text) {
         var data = JSON.parse(text);
-              console.log(data);
+        console.log(data);
 
 
         var tableBody =
@@ -150,10 +156,10 @@
         if (document.getElementById('DV-check').checked == true) {
           tableBody += '<th class="border-0" scope="col" id="total-table-heading">Domestic Violence</th>';
         }
-        if (document.getElementById('robbery-check').checked == true) {
-          tableBody += '<th class="border-0" scope="col" id="total-table-heading">ROBBERY</th>';
-        }
-        
+        //if (document.getElementById('robbery-check').checked == true) {
+        //tableBody += '<th class="border-0" scope="col" id="total-table-heading">ROBBERY</th>';
+        //}
+
         tableBody += '</tr>';
 
 
@@ -178,9 +184,9 @@
           if (document.getElementById('DV-check').checked == true) {
             tableBody += '</th><td>' + d.DV;
           }
-          if (document.getElementById('robbery-check').checked == true) {
-            tableBody += '</th><td>' + d.ROBBERY;
-          }
+          //if (document.getElementById('robbery-check').checked == true) {
+          //tableBody += '</th><td>' + d.ROBBERY;
+          //}
 
           tableBody += '</td></tr>';
         });
@@ -189,7 +195,7 @@
         // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
 
 
-//        console.log(s, "helloooooo")
+        //        console.log(s, "helloooooo")
 
         var divContainer = document.getElementById("myGrid");
         divContainer.innerHTML = tableBody;
@@ -198,7 +204,7 @@
   </script>
 
 
-<!-- 
+  <!-- 
   
   <script>
     function postData(input) {
@@ -221,10 +227,10 @@
     // On mouse-over, execute myFunction
     function buttonfunction() {
       document.getElementById("testrun").click(); // Click on the checkbox
-    console.log("button chal rhi");
-    
+      console.log("button chal rhi");
+
     }
-    </script>
+  </script>
 
 
 
@@ -233,7 +239,7 @@
 
 <body onload="startTime();datafillfun(1);">
 
-<!-- 
+  <!-- 
   <h1>My Website</h1>
   <form action="/my-link/">
       <input type="submit" value="Click me" />
@@ -241,7 +247,7 @@
   
   <button> <a href="/my-link/">Click me</a></button>
  -->
-<!-- 
+  <!-- 
  <p>{{ output }}</p>
 
  -->
@@ -319,12 +325,12 @@
                 <a href="#">Kidnapping</a>
               </label>
             </div>
-            <div class="form-check">
+            <!-- <div class="form-check">
               <input class="form-check-input" type="checkbox" value="Robbery" id="robbery-check">
               <label class="form-check-label" for="robbery-check">
                 <a href="#">Robbery</a>
               </label>
-            </div>
+            </div> -->
             <div class="form-check">
               <input class="form-check-input" type="checkbox" value="Rape" id="Rape-check">
               <label class="form-check-label" for="Rape-check">
@@ -426,6 +432,12 @@
               <input class="form-check-input" type="checkbox" value="2012" id="2012-check">
               <label class="form-check-label" for="2012-check">
                 <a href="#" onclick="datafillfun(12)">2012</a>
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="2013" id="2013-check">
+              <label class="form-check-label" for="2013-check">
+                <a href="#" onclick="datafillfun(12)">2013</a>
               </label>
             </div>
 
@@ -737,10 +749,17 @@
           } else if (document.getElementById('2011-check').checked == true) {
             document.getElementById('dropdownMenuButton').innerHTML = '2011';
             s = "{{url_for('static',filename='assets/data/fulldata2011.json')}}";
-          } else if (document.getElementById('2012-check').checked == true) {
+          } 
+          else if (document.getElementById('2012-check').checked == true) {
             document.getElementById('dropdownMenuButton').innerHTML = '2012';
             s = "{{url_for('static',filename='assets/data/fulldata2012.json')}}";
-          } else {
+          }
+          else if (document.getElementById('2013-check').checked == true) {
+            document.getElementById('dropdownMenuButton').innerHTML = '2013';
+            s = "{{url_for('static',filename='assets/data/Crimes_2013.json')}}";
+          } 
+          
+          else {
             s = "{{url_for('static',filename='assets/data/fulldata2011.json')}}";
           }
 
@@ -776,18 +795,18 @@
 
     </div>
   </div>
-<!-- middle-line-break -->
-<br>
-<br>
+  <!-- middle-line-break -->
+  <br>
+  <br>
   <div id="middle-line" class="row pt-6" style="justify-content: center;">
     <div class="col-8 card shadow-soft border border-light rounded" style=" height: 7px;">
 
     </div>
 
-</div>
-<br>
+  </div>
+  <br>
   <!------------------------------- Webscrapped HeatMap  ---------------------------------------->
-  
+
   <div class="row pt-6" style="display: flex; justify-content:center; font-weight:200">
     <h2 style="
     font-weight: 800;
@@ -795,7 +814,7 @@
   </div>
   <br>
   <div class="row pt-5 pb-5" style="display: flex; justify-content:space-evenly">
- 
+
     <!-- <div id="heatmap-left" class="d-flex .flex-column" style="display: flex; flex-direction:column">
       <div style="width: 600px; font-weight: 800;
       font-family: monospace;">
@@ -859,15 +878,15 @@
 
 
     <div id="web-heat-map" class="card bg-primary border-light shadow-soft">
-      <iframe src="{{url_for('static',filename='assets/heatmap_final.html')}}" frameborder="0" width="700"
-        height="700" id="iframeID3"></iframe>
+      <iframe src="{{url_for('static',filename='assets/heatmap_final.html')}}" frameborder="0" width="700" height="700"
+        id="iframeID3"></iframe>
     </div>
 
 
   </div>
 
 
- 
+
   </div>
 
   <br>
