@@ -97,15 +97,15 @@
       } else if (document.getElementById('2011-check').checked == true) {
         document.getElementById('dropdownMenuButton').innerHTML = '2011';
         s = "{{url_for('static',filename='assets/data/Crimes_2011.json')}}";
-      } 
+      }
       else if (document.getElementById('2012-check').checked == true) {
         document.getElementById('dropdownMenuButton').innerHTML = '2012';
         s = "{{url_for('static',filename='assets/data/Crimes_2012.json')}}";
-      } 
+      }
       else if (document.getElementById('2013-check').checked == true) {
         document.getElementById('dropdownMenuButton').innerHTML = '2013';
         s = "{{url_for('static',filename='assets/data/Crimes_2013.json')}}";
-      } 
+      }
       else if (document.getElementById('2014-check').checked == true) {
         document.getElementById('dropdownMenuButton').innerHTML = '2014';
         s = "{{url_for('static',filename='assets/data/Crimes_2014.json')}}";
@@ -141,7 +141,7 @@
       else if (document.getElementById('2021-check').checked == true) {
         document.getElementById('dropdownMenuButton').innerHTML = '2021';
         s = "{{url_for('static',filename='assets/data/Crimes_2021.json')}}";
-      }         
+      }
       else {
         s = "{{url_for('static',filename='assets/data/.json')}}";
       }
@@ -571,10 +571,10 @@
             <div class="caseKidnapping">Kidnapping</div>
             <div class="caseFigKidnapping">...</div>
           </div>
-            <div class="robbery">
+          <!-- <div class="robbery">
             <div class="caseRobbery">Robbery</div>
             <div class="caseFigRobbery">...</div>
-          </div>  
+          </div> -->
           <div class="DD">
             <div class="caseDD">Dowry Deaths</div>
             <div class="caseFigDD">...</div>
@@ -799,92 +799,92 @@
         showMapData("Total");
 
         function showMapData(stateName) {
-         var s = "{{url_for('static',filename='assets/data/Crimes_2001.json')}}";
+          var s = "{{url_for('static',filename='assets/data/Crimes_2001.json')}}";
 
 
 
 
-      if (document.getElementById('2001-check').checked == true) {
-        document.getElementById('dropdownMenuButton').innerHTML = '2001';
-        s = "{{url_for('static',filename='assets/data/Crimes_2001.json')}}";
-      } else if (document.getElementById('2002-check').checked == true) {
-        document.getElementById('dropdownMenuButton').innerHTML = '2002';
-        s = "{{url_for('static',filename='assets/data/Crimes_2002.json')}}";
-      } else if (document.getElementById('2003-check').checked == true) {
-        document.getElementById('dropdownMenuButton').innerHTML = '2003';
-        s = "{{url_for('static',filename='assets/data/Crimes_2003.json')}}";
-      } else if (document.getElementById('2004-check').checked == true) {
-        document.getElementById('dropdownMenuButton').innerHTML = '2004';
-        s = "{{url_for('static',filename='assets/data/Crimes_2004.json')}}";
-      } else if (document.getElementById('2005-check').checked == true) {
-        document.getElementById('dropdownMenuButton').innerHTML = '2005';
-        s = "{{url_for('static',filename='assets/data/Crimes_2005.json')}}";
-      } else if (document.getElementById('2006-check').checked == true) {
-        document.getElementById('dropdownMenuButton').innerHTML = '2006';
-        s = "{{url_for('static',filename='assets/data/Crimes_2006.json')}}";
-      } else if (document.getElementById('2007-check').checked == true) {
-        document.getElementById('dropdownMenuButton').innerHTML = '2007';
-        s = "{{url_for('static',filename='assets/data/Crimes_2007.json')}}";
-      } else if (document.getElementById('2008-check').checked == true) {
-        document.getElementById('dropdownMenuButton').innerHTML = '2008';
-        s = "{{url_for('static',filename='assets/data/Crimes_2008.json')}}";
-      } else if (document.getElementById('2009-check').checked == true) {
-        document.getElementById('dropdownMenuButton').innerHTML = '2009';
-        s = "{{url_for('static',filename='assets/data/Crimes_2009.json')}}";
-      } else if (document.getElementById('2010-check').checked == true) {
-        document.getElementById('dropdownMenuButton').innerHTML = '2010';
-        s = "{{url_for('static',filename='assets/data/Crimes_2010.json')}}";
-      } else if (document.getElementById('2011-check').checked == true) {
-        document.getElementById('dropdownMenuButton').innerHTML = '2011';
-        s = "{{url_for('static',filename='assets/data/Crimes_2011.json')}}";
-      } 
-      else if (document.getElementById('2012-check').checked == true) {
-        document.getElementById('dropdownMenuButton').innerHTML = '2012';
-        s = "{{url_for('static',filename='assets/data/Crimes_2012.json')}}";
-      } 
-      else if (document.getElementById('2013-check').checked == true) {
-        document.getElementById('dropdownMenuButton').innerHTML = '2013';
-        s = "{{url_for('static',filename='assets/data/Crimes_2013.json')}}";
-      } 
-      else if (document.getElementById('2014-check').checked == true) {
-        document.getElementById('dropdownMenuButton').innerHTML = '2014';
-        s = "{{url_for('static',filename='assets/data/Crimes_2014.json')}}";
-      }
-      else if (document.getElementById('2014-check').checked == true) {
-        document.getElementById('dropdownMenuButton').innerHTML = '2014';
-        s = "{{url_for('static',filename='assets/data/Crimes_2014.json')}}";
-      }
-      else if (document.getElementById('2015-check').checked == true) {
-        document.getElementById('dropdownMenuButton').innerHTML = '2015';
-        s = "{{url_for('static',filename='assets/data/Crimes_2015.json')}}";
-      }
-      else if (document.getElementById('2016-check').checked == true) {
-        document.getElementById('dropdownMenuButton').innerHTML = '2016';
-        s = "{{url_for('static',filename='assets/data/Crimes_2016.json')}}";
-      }
-      else if (document.getElementById('2017-check').checked == true) {
-        document.getElementById('dropdownMenuButton').innerHTML = '2017';
-        s = "{{url_for('static',filename='assets/data/Crimes_2017.json')}}";
-      }
-      else if (document.getElementById('2018-check').checked == true) {
-        document.getElementById('dropdownMenuButton').innerHTML = '2018';
-        s = "{{url_for('static',filename='assets/data/Crimes_2018.json')}}";
-      }
-      else if (document.getElementById('2019-check').checked == true) {
-        document.getElementById('dropdownMenuButton').innerHTML = '2019';
-        s = "{{url_for('static',filename='assets/data/Crimes_2019.json')}}";
-      }
-      else if (document.getElementById('2020-check').checked == true) {
-        document.getElementById('dropdownMenuButton').innerHTML = '2020';
-        s = "{{url_for('static',filename='assets/data/Crimes_2020.json')}}";
-      }
-      else if (document.getElementById('2021-check').checked == true) {
-        document.getElementById('dropdownMenuButton').innerHTML = '2021';
-        s = "{{url_for('static',filename='assets/data/Crimes_2021.json')}}";
-      }         
-      else {
-        s = "{{url_for('static',filename='assets/data/Crimes_2011.json')}}";
-      }
+          if (document.getElementById('2001-check').checked == true) {
+            document.getElementById('dropdownMenuButton').innerHTML = '2001';
+            s = "{{url_for('static',filename='assets/data/Crimes_2001.json')}}";
+          } else if (document.getElementById('2002-check').checked == true) {
+            document.getElementById('dropdownMenuButton').innerHTML = '2002';
+            s = "{{url_for('static',filename='assets/data/Crimes_2002.json')}}";
+          } else if (document.getElementById('2003-check').checked == true) {
+            document.getElementById('dropdownMenuButton').innerHTML = '2003';
+            s = "{{url_for('static',filename='assets/data/Crimes_2003.json')}}";
+          } else if (document.getElementById('2004-check').checked == true) {
+            document.getElementById('dropdownMenuButton').innerHTML = '2004';
+            s = "{{url_for('static',filename='assets/data/Crimes_2004.json')}}";
+          } else if (document.getElementById('2005-check').checked == true) {
+            document.getElementById('dropdownMenuButton').innerHTML = '2005';
+            s = "{{url_for('static',filename='assets/data/Crimes_2005.json')}}";
+          } else if (document.getElementById('2006-check').checked == true) {
+            document.getElementById('dropdownMenuButton').innerHTML = '2006';
+            s = "{{url_for('static',filename='assets/data/Crimes_2006.json')}}";
+          } else if (document.getElementById('2007-check').checked == true) {
+            document.getElementById('dropdownMenuButton').innerHTML = '2007';
+            s = "{{url_for('static',filename='assets/data/Crimes_2007.json')}}";
+          } else if (document.getElementById('2008-check').checked == true) {
+            document.getElementById('dropdownMenuButton').innerHTML = '2008';
+            s = "{{url_for('static',filename='assets/data/Crimes_2008.json')}}";
+          } else if (document.getElementById('2009-check').checked == true) {
+            document.getElementById('dropdownMenuButton').innerHTML = '2009';
+            s = "{{url_for('static',filename='assets/data/Crimes_2009.json')}}";
+          } else if (document.getElementById('2010-check').checked == true) {
+            document.getElementById('dropdownMenuButton').innerHTML = '2010';
+            s = "{{url_for('static',filename='assets/data/Crimes_2010.json')}}";
+          } else if (document.getElementById('2011-check').checked == true) {
+            document.getElementById('dropdownMenuButton').innerHTML = '2011';
+            s = "{{url_for('static',filename='assets/data/Crimes_2011.json')}}";
+          }
+          else if (document.getElementById('2012-check').checked == true) {
+            document.getElementById('dropdownMenuButton').innerHTML = '2012';
+            s = "{{url_for('static',filename='assets/data/Crimes_2012.json')}}";
+          }
+          else if (document.getElementById('2013-check').checked == true) {
+            document.getElementById('dropdownMenuButton').innerHTML = '2013';
+            s = "{{url_for('static',filename='assets/data/Crimes_2013.json')}}";
+          }
+          else if (document.getElementById('2014-check').checked == true) {
+            document.getElementById('dropdownMenuButton').innerHTML = '2014';
+            s = "{{url_for('static',filename='assets/data/Crimes_2014.json')}}";
+          }
+          else if (document.getElementById('2014-check').checked == true) {
+            document.getElementById('dropdownMenuButton').innerHTML = '2014';
+            s = "{{url_for('static',filename='assets/data/Crimes_2014.json')}}";
+          }
+          else if (document.getElementById('2015-check').checked == true) {
+            document.getElementById('dropdownMenuButton').innerHTML = '2015';
+            s = "{{url_for('static',filename='assets/data/Crimes_2015.json')}}";
+          }
+          else if (document.getElementById('2016-check').checked == true) {
+            document.getElementById('dropdownMenuButton').innerHTML = '2016';
+            s = "{{url_for('static',filename='assets/data/Crimes_2016.json')}}";
+          }
+          else if (document.getElementById('2017-check').checked == true) {
+            document.getElementById('dropdownMenuButton').innerHTML = '2017';
+            s = "{{url_for('static',filename='assets/data/Crimes_2017.json')}}";
+          }
+          else if (document.getElementById('2018-check').checked == true) {
+            document.getElementById('dropdownMenuButton').innerHTML = '2018';
+            s = "{{url_for('static',filename='assets/data/Crimes_2018.json')}}";
+          }
+          else if (document.getElementById('2019-check').checked == true) {
+            document.getElementById('dropdownMenuButton').innerHTML = '2019';
+            s = "{{url_for('static',filename='assets/data/Crimes_2019.json')}}";
+          }
+          else if (document.getElementById('2020-check').checked == true) {
+            document.getElementById('dropdownMenuButton').innerHTML = '2020';
+            s = "{{url_for('static',filename='assets/data/Crimes_2020.json')}}";
+          }
+          else if (document.getElementById('2021-check').checked == true) {
+            document.getElementById('dropdownMenuButton').innerHTML = '2021';
+            s = "{{url_for('static',filename='assets/data/Crimes_2021.json')}}";
+          }
+          else {
+            s = "{{url_for('static',filename='assets/data/Crimes_2011.json')}}";
+          }
 
 
 
@@ -896,19 +896,15 @@
               var i;
               for (i = 0; i < data.length; i++) {
                 if (data[i].State.toLowerCase() == stateName.toLowerCase()) {
+
                   document.querySelector(".state-name").innerHTML = stateName;
-                  document.querySelector(".caseFigAoW").innerHTML =
-                    data[i].AoW;
-                  document.querySelector(".caseFigKidnapping").innerHTML =
-                    data[i]["K&A"];
-                   document.querySelector(".caseFigRobbery").innerHTML =
-                    data[i].ROBBERY;
-                  document.querySelector(".caseFigTotal").innerHTML =
-                    data[i]["Total Crimes"];
-                  document.querySelector(".caseFigDD").innerHTML =
-                    data[i]["DD"];
-                  document.querySelector(".caseFigDV").innerHTML =
-                    data[i]["DV"];
+
+                  document.querySelector(".caseFigAoW").innerHTML = data[i].AoW;
+                  document.querySelector(".caseFigKidnapping").innerHTML = data[i]["K&A"];
+                 // document.querySelector(".caseFigRobbery").innerHTML =data[i].ROBBERY;
+                  document.querySelector(".caseFigTotal").innerHTML =data[i]["Total Crimes"];
+                  document.querySelector(".caseFigDD").innerHTML =data[i]["DD"];
+                  document.querySelector(".caseFigDV").innerHTML =data[i]["DV"];
                 }
               }
             });
