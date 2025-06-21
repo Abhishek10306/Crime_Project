@@ -111,7 +111,8 @@ box-shadow:  28px 28px 55px #bebebe,
   background-color: #e6e7ee;
   border: none;
   border-radius: 40px;
-  box-shadow: 3px 3px 7px #ababab, -3px -3px 7px #ffffff;
+  /* box-shadow: 3px 3px 7px #ababab, -3px -3px 7px #ffffff; */
+  box-shadow: none;
 
 }
 .dropdown1:hover .dropdown1-button {
@@ -130,7 +131,7 @@ box-shadow:  28px 28px 55px #bebebe,
   z-index: 2;
 
   border-radius: 10px;
-  box-shadow: 3px 3px 7px #ababab, -3px -3px 7px #ffffff;
+  /* box-shadow: 3px 3px 7px #ababab, -3px -3px 7px #ffffff; */
 }
 .dropdown1-content--item {
   color: #4a4a4a;

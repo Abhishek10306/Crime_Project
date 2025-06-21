@@ -99,9 +99,10 @@ body {
     font-size: 1rem;
     font-weight: 300;
     line-height: 1.5;
-    color: #44476A;
+    color: #ffffff;
     text-align: left;
-    background-color: #e6e7ee;
+    background-color: #323238;
+    overflow-x: hidden;
 }
 
 [tabindex="-1"]:focus {
@@ -412,7 +413,7 @@ h1, h2, h3, h4, h5, h6,
     font-family: inherit;
     font-weight: 400;
     line-height: 1.3;
-    color: #31344b;
+    color: #ffffff;
 }
 
 h1, .h1 {
@@ -1622,8 +1623,8 @@ pre code {
 .table {
     width: 100%;
     margin-bottom: 1rem;
-    color: #44476A;
-    background-color: transparent;
+    color: #9f9f9f;
+    background-color: rgb(0, 0, 0);
 }
 
 .table th,
@@ -1673,7 +1674,7 @@ pre code {
 }
 
 .table-hover tbody tr:hover {
-    color: #44476A;
+    color: #ffffff;
     background-color: rgba(38, 40, 51, 0.03);
 }
 
@@ -6519,6 +6520,7 @@ input[type="button"].btn-block {
     min-width: 0;
     word-wrap: break-word;
     background-color: #e6e7ee;
+    color: white;
     background-clip: border-box;
     border: 0.0625rem solid rgba(243, 247, 250, 0.05);
     border-radius: 0.55rem;
@@ -21880,11 +21882,13 @@ button.section-slack:focus {
 }
 
 .shadow-soft {
-    box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important;
+    /* box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff !important; */
+    box-shadow: none;
 }
 
 .shadow-inset {
-    box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #FFFFFF !important;
+    /* box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #FFFFFF !important; */
+    box-shadow: none;
 }
 
 /**
@@ -22765,7 +22769,8 @@ button.section-slack:focus {
 }
 
 .navbar-light .navbar-brand {
-    color: #44476A;
+    color: white;
+    background-color: white;
 }
 
 .navbar-theme-primary:not(.headroom) {
@@ -22773,7 +22778,7 @@ button.section-slack:focus {
 }
 
 .navbar-theme-primary:not(.navbar-transparent) {
-    background-color: #e6e7ee;
+    background-color: black;
 }
 
 .navbar-theme-primary.navbar-light:not(.headroom) .navbar-nav .dropdown-item.active, .navbar-theme-primary.navbar-light:not(.headroom) .navbar-nav .dropdown-item:hover, .navbar-theme-primary.navbar-light:not(.headroom) .navbar-nav .dropdown-item:focus,
@@ -26465,7 +26470,8 @@ a.badge-slack:hover, a.badge-slack:focus {
     letter-spacing: 0.025em;
     font-size: 1rem;
     border-color: #D1D9E6;
-    box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff;
+    /* box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #ffffff; */
+    box-shadow: none;
 }
 
 .btn.btn-pill {
@@ -27095,9 +27101,10 @@ a.badge-slack:hover, a.badge-slack:focus {
 
 .btn-black:hover {
     color: #ECF0F3;
-    background-color: #262833;
+    background-color: #000;
     border-color: #262833;
-    box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #FFFFFF;
+    /* box-shadow:inset 0px 0px 3px #FFFFFF; */
+    border: 1px solid white;
 }
 
 .btn-black.disabled, .btn-black:disabled {
@@ -27120,6 +27127,7 @@ a.badge-slack:hover, a.badge-slack:focus {
 .btn-black:not(:disabled):not(.disabled):active:focus, .btn-black:not(:disabled):not(.disabled).active:focus,
     .show > .btn-black.dropdown-toggle:focus {
     box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #FFFFFF;
+    box-shadow: none;
 }
 
 .btn-purple {
@@ -31777,7 +31785,7 @@ p, ol li, ul li {
 }
 
 a, .text-action {
-    color: #31344b;
+    color: white;
     font-weight: 400;
     transition: all 0.2s ease;
 }
@@ -32011,7 +32019,7 @@ article a:hover {
 }
 
 .text-dark, .text-dark:hover {
-    color: #31344b !important;
+    color: rgb(0, 0, 0) !important;
 }
 
 .text-dark a:not(.btn), .text-dark h1, .text-dark h2, .text-dark h3, .text-dark h4, .text-dark h5, .text-dark h6, .text-dark .h1, .text-dark .h2, .text-dark .h3, .text-dark .h4, .text-dark .h5, .text-dark .h6, .text-dark .display-1, .text-dark .display-2, .text-dark .display-3, .text-dark .display-4 {
