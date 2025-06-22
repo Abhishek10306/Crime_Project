@@ -381,6 +381,7 @@ padding-bottom: 10px;
 .dropdown1-content a:hover {
   border-radius: 10px;
   box-shadow: inset 3px 3px 5px #b8b9be, inset -3px -3px 5px #fff;
+  color: rgb(0, 0, 0) !important;
 }
 .dropdown1:hover .dropdown1-content {
   display: block;

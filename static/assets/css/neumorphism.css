@@ -201,7 +201,7 @@ a {
 }
 
 a:hover {
-    color: #262833;
+    color: #ffffff !important;
     text-decoration: none;
 }
 
@@ -9493,7 +9493,7 @@ button.bg-soft:focus {
 }
 
 .bg-black {
-    background-color: #262833 !important;
+    background-color: #323238 !important;
 }
 
 a.bg-black:hover, a.bg-black:focus,
@@ -26659,7 +26659,7 @@ a.badge-slack:hover, a.badge-slack:focus {
 }
 
 .btn-primary:hover {
-    color: #31344b;
+    color: black !important;
     background-color: #e6e7ee;
     border-color: #e6e7ee;
     box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #FFFFFF;
@@ -32056,7 +32056,7 @@ article a:hover {
 }
 
 .text-gray, .text-gray:hover {
-    color: #44476A !important;
+    color: #cacfff  !important;
 }
 
 .text-gray a:not(.btn), .text-gray h1, .text-gray h2, .text-gray h3, .text-gray h4, .text-gray h5, .text-gray h6, .text-gray .h1, .text-gray .h2, .text-gray .h3, .text-gray .h4, .text-gray .h5, .text-gray .h6, .text-gray .display-1, .text-gray .display-2, .text-gray .display-3, .text-gray .display-4 {
