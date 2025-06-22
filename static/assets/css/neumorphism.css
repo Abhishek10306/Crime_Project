@@ -2933,7 +2933,7 @@ textarea.form-control {
 .btn {
     display: inline-block;
     font-weight: 400;
-    color: #44476A;
+    color:#a4af97c2;
     text-align: center;
     vertical-align: middle;
     -webkit-user-select: none;
@@ -2945,7 +2945,7 @@ textarea.form-control {
     font-size: 1rem;
     line-height: 1.5;
     border-radius: 0.55rem;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    /* transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; */
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -2955,7 +2955,7 @@ textarea.form-control {
 }
 
 .btn:hover {
-    color: #44476A;
+    color: #7f83ae;
     text-decoration: none;
 }
 
