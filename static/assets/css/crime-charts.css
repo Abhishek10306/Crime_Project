@@ -89,7 +89,7 @@ box-shadow:  12px 12px 25px #a8a8a8,
   .card:before{
 	content: '';
 	display: block;
-	padding-bottom: 25%;
+	/* padding-bottom: 50%; */
 	width: 100%;
   }
   

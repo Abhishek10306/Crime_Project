@@ -29,7 +29,7 @@ class MyHeader extends HTMLElement {
       </div>
       </div>
       
-      <a href="#" class="btn-emoji" onclick="audio()">
+      <a href="#" class="btn-emoji" style = "box-shadow : none;"onclick="audio()">
       <i class="far fa-grin-tongue"></i>
       </a>
 

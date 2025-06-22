@@ -26502,7 +26502,7 @@ a.badge-slack:hover, a.badge-slack:focus {
 
 .btn-group > .btn:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
-    box-shadow: 3px 3px 6px #b8b9be, 0px -3px 6px #ffffff;
+    /* box-shadow: 3px 3px 6px #b8b9be, 0px -3px 6px #ffffff; */
 }
 
 .btn-xs {
@@ -29057,7 +29057,7 @@ a.badge-slack:hover, a.badge-slack:focus {
     border: 0.0625rem solid #D1D9E6;
     font-size: 1rem;
     color: #44476A;
-    box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff;
+    /* box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff; */
 }
 
 .custom-file-label::after {
@@ -30443,7 +30443,7 @@ textarea[resize="horizontal"] {
 .nav-pills .nav-link {
     padding: 0.75rem 0.85rem;
     transition: all 0.2s ease;
-    box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff;
+    /* box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff; */
     border: 1px solid #D1D9E6;
 }
 
@@ -31960,7 +31960,7 @@ article a:hover {
 }
 
 .text-success, .text-success:hover {
-    color: #18634B !important;
+    color: #323328 !important;
 }
 
 .text-success a:not(.btn), .text-success h1, .text-success h2, .text-success h3, .text-success h4, .text-success h5, .text-success h6, .text-success .h1, .text-success .h2, .text-success .h3, .text-success .h4, .text-success .h5, .text-success .h6, .text-success .display-1, .text-success .display-2, .text-success .display-3, .text-success .display-4 {
