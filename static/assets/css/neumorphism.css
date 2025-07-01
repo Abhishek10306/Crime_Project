@@ -16926,7 +16926,7 @@ a.text-slack:hover, a.text-slack:focus {
   h3 {
         page-break-after: avoid;
     }
-  @    page {
+    @page {
         size: a3;
     }
 
@@ -32056,7 +32056,7 @@ article a:hover {
 }
 
 .text-gray, .text-gray:hover {
-    color: #cacfff  !important;
+    color: #323237  !important;
 }
 
 .text-gray a:not(.btn), .text-gray h1, .text-gray h2, .text-gray h3, .text-gray h4, .text-gray h5, .text-gray h6, .text-gray .h1, .text-gray .h2, .text-gray .h3, .text-gray .h4, .text-gray .h5, .text-gray .h6, .text-gray .display-1, .text-gray .display-2, .text-gray .display-3, .text-gray .display-4 {
