@@ -1,6 +1,7 @@
 from app import app
 from flask import jsonify, request, abort,render_template, url_for,json
 import flask
+from flask import make_response
 import os
 import re
 import json
@@ -19,13 +20,21 @@ def crime_locator():
 
 from prediction import *
 from werkzeug.utils import secure_filename
-@app.route('/crime-predictor.html', methods = ['GET', 'POST'])
+# @app.route('/crime-predictor.html', methods = ['GET', 'POST'])
+# def crime_predictor():
+#     if request.method == 'POST':
+#         f = request.files['file']
+#         f.save(secure_filename(f.filename))
+#         print('file uploaded successfully')
+#     return render_template('crime-predictor.html')
+
+@app.route('/crime-predictor.html', methods=['GET', 'POST'])
 def crime_predictor():
-    if request.method == 'POST':
-        f = request.files['file']
-        f.save(secure_filename(f.filename))
-        print('file uploaded successfully')
-    return render_template('crime-predictor.html')
+    response = make_response(render_template('crime-predictor.html'))
+    response.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
+    response.headers['Pragma'] = 'no-cache'
+    response.headers['Expires'] = '0'
+    return response
 
 @app.route('/uploader', methods = ['GET', 'POST'])
 def upload_file():
