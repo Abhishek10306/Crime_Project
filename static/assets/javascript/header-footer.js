@@ -24,6 +24,7 @@ class MyHeader extends HTMLElement {
       <a href="crime-charts.html" class="btn btn-primary text-dark mr-2"><i class="fas fa-globe-asia"></i>&nbsp CrimeCharts</a>
       <a href="crime-predictor.html" class="btn btn-primary text-dark mr-2"><i class="fas fa-robot"></i>&nbsp CrimePredictor</a>  
       <a href="crime-locator.html" class="btn btn-primary text-dark mr-2"><i class="fas fa-map-marker-alt"></i> &nbsp CrimeLocator</a>
+      <a href="feed.html" class="btn btn-primary text-dark mr-2"><i class="fas fa-newspaper"></i>&nbsp CrimeFeed</a>
       <a href="about.html" class="btn btn-primary text-dark mr-2"><i class="fas fa-user-secret"></i>&nbsp About Us</a>
       <a href="help-page.html" class="btn btn-primary text-dark mr-2"><i class="fas fa-info-circle"></i>&nbsp Help</a>
       </div>
