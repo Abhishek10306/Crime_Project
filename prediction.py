@@ -10,6 +10,8 @@ def predictfun(filename1):
     #reading the csv file
     print("filename", filename1)
     data_prophet_df_final = pd.read_csv(filename1)
+    data_prophet_df_final["y"] = data_prophet_df_final["CRIME_RATE"]
+    data_prophet_df_final["ds"] = data_prophet_df_final["YEAR"]
     filename="static/assets/data/predictinputjsondata.json"
     data_prophet_df_final.to_json(filename,orient='records')
     
@@ -17,7 +19,7 @@ def predictfun(filename1):
     m = Prophet()
     m.fit(data_prophet_df_final)
 
-    future = m.make_future_dataframe(periods=365)  #periods = no. of days for prediction
+    future = m.make_future_dataframe(periods=365*10)  #periods = no. of days for prediction
 
     forecast = m.predict(future)
 
