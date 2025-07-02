@@ -192,9 +192,13 @@
 <script>
     // On mouse-over, execute myFunction
     function buttonfunction() {
-      document.getElementById("testrun").click(); // Click on the checkbox
-   // console.log("button chal rhi");
-    
+        const fileInput = document.getElementById('customFile');
+        if (!fileInput.value) {             
+            alert('No file uploaded. Please choose a file first.');
+            return;                               
+        }
+        document.getElementById("testrun").click();
+        // console.log("button chal rhi");
     }
     </script>
 
