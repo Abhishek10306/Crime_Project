@@ -189,17 +189,17 @@
         }
     </script> -->
 
-<script>
-    // On mouse-over, execute myFunction
-    function buttonfunction() {
-        const fileInput = document.getElementById('customFile');
-        if (!fileInput.value) {             
-            alert('No file uploaded. Please choose a file first.');
-            return;                               
+    <script>
+        // On mouse-over, execute myFunction
+        function buttonfunction() {
+            const fileInput = document.getElementById('customFile');
+            if (!fileInput.value) {
+                alert('No file uploaded. Please choose a file first.');
+                return;
+            }
+            document.getElementById("testrun").click();
+            // console.log("button chal rhi");
         }
-        document.getElementById("testrun").click();
-        // console.log("button chal rhi");
-    }
     </script>
 
 </head>
@@ -240,16 +240,18 @@
                             <h3 class="h5 card-title mt-3">Metadata</h3>
                             <p class="card-text">Dataset contains the following columns:
                             <ul>
-                                <li>ID: Unique identifier for the record.</li>
-                                <li>Date: Date when the incident occurred.</li>
-                                <li>Primary Type: The primary description of the crime.</li>
-                                <li>Location: The location where the incident occurred in a format that allows for
-                                    creation of maps and other geographic operations on this data portal. This
-                                    location
-                                    is shifted from the actual location for partial redaction but falls on the same
-                                    block.</li>
+                                <li><strong>Year (ds):</strong> Indicates the timestamp of the record, used as the
+                                    temporal index for time series modeling.</li>
+                                <li><strong>Total-Crime (y):</strong> Total number of reported crimes in that year;
+                                    serves as the forecasting target.</li>
+                                <li><strong>STATE:</strong> Refers to the Indian state for each record; analyzed
+                                    individually.</li>
+                                <li><strong>Additional columns:</strong> Include crime types, population, and crime
+                                    rate—supportive but not essential for Prophet’s core <code>ds</code> and
+                                    <code>y</code> structure.</li>
                             </ul>
                             </p>
+
 
 
                         </div>
@@ -328,7 +330,8 @@
                 <div class="card bg-primary border-light shadow-soft">
                     <div class="card-body">
                         <h3 class="h5 card-title mt-3">Visualizing future results</h3>
-                        <img src="{{ url_for('static',filename='assets/images/predictionresult.png', v=cache_buster) }}">
+                        <img
+                            src="{{ url_for('static',filename='assets/images/predictionresult.png', v=cache_buster) }}">
                     </div>
                 </div>
             </div>
