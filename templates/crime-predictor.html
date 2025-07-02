@@ -42,7 +42,8 @@
         function datafillfun(n) {
 
             //console.log("testing run...");
-            var s = "{{url_for('static',filename='assets/data/predictinputjsondata.json')}}";
+            //var s = "{{url_for('static',filename='assets/data/predictinputjsondata.json')}}";
+            const s = "{{ url_for('static', filename='assets/data/predictinputjsondata.json') }}" + "?v=" + Date.now();
 
             document.getElementById('myGrid').innerHTML = '';
 
@@ -52,6 +53,7 @@
                 var rawFile = new XMLHttpRequest();
                 rawFile.overrideMimeType("application/json");
                 rawFile.open("GET", file, true);
+
                 rawFile.onreadystatechange = function () {
                     if (rawFile.readyState === 4 && rawFile.status == "200") {
                         callback(rawFile.responseText);
@@ -115,7 +117,8 @@
         function datafillfun1(n) {
 
             //console.log("testing run...");
-            var s = "{{url_for('static',filename='assets/data/predictoutjsondata.json')}}";
+            // var s = "{{url_for('static',filename='assets/data/predictoutjsondata.json')}}";
+            const s = "{{ url_for('static', filename='assets/data/predictoutjsondata.json') }}" + "?v=" + Date.now();
 
 
 
@@ -171,6 +174,20 @@
             });
         }
     </script>
+    <!-- <script>
+        async function uploadAndRefresh() {
+
+            console.log("hoooaoaoaooaooalllllaee");
+            datafillfun();
+            datafillfun1();
+
+            setTimeout(() => {
+                const timestamp = Date.now();
+                document.getElementById('pred-img').src ='/static/assets/images/predictionresult.png?v=' + timestamp;
+                document.getElementById('trend-img').src ='/static/assets/images/predictiontrend.png?v=' + timestamp;
+            }, 2000);
+        }
+    </script> -->
 
 <script>
     // On mouse-over, execute myFunction
@@ -307,7 +324,7 @@
                 <div class="card bg-primary border-light shadow-soft">
                     <div class="card-body">
                         <h3 class="h5 card-title mt-3">Visualizing future results</h3>
-                        <img src="{{url_for('static',filename='assets/images/predictionresult.png')}}">
+                        <img src="{{ url_for('static',filename='assets/images/predictionresult.png', v=cache_buster) }}">
                     </div>
                 </div>
             </div>
@@ -316,7 +333,7 @@
                 <div class="card bg-primary border-light shadow-soft">
                     <div class="card-body">
                         <h3 class="h5 card-title mt-3">Expected trend in the future</h3>
-                        <img src="{{url_for('static',filename='assets/images/predictiontrend.png')}}">
+                        <img src="{{ url_for('static',filename='assets/images/predictiontrend.png', v=cache_buster) }}">
                     </div>
                 </div>
             </div>

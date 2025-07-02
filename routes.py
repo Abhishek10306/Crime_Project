@@ -5,6 +5,7 @@ from flask import make_response
 import os
 import re
 import json
+from time import time
 
 
 @app.route('/crime-charts.html')
@@ -45,7 +46,7 @@ def upload_file():
       print('file uploaded successfully11111111111111', f.filename)
       #return 'file uploaded successfully'
       predictfun(f.filename)
-    return render_template('crime-predictor.html')
+    return render_template('crime-predictor.html', cache_buster=int(time()))
       
 
 @app.route('/feed.html')

@@ -10,8 +10,9 @@ def predictfun(filename1):
     #reading the csv file
     print("filename", filename1)
     data_prophet_df_final = pd.read_csv(filename1)
-    data_prophet_df_final["y"] = data_prophet_df_final["CRIME_RATE"]
-    data_prophet_df_final["ds"] = data_prophet_df_final["YEAR"]
+    if "CRIME_RATE" in data_prophet_df_final.columns and "YEAR" in data_prophet_df_final.columns:
+        data_prophet_df_final["y"] = data_prophet_df_final["CRIME_RATE"]
+        data_prophet_df_final["ds"] = data_prophet_df_final["YEAR"]
     filename="static/assets/data/predictinputjsondata.json"
     data_prophet_df_final.to_json(filename,orient='records')
     
@@ -25,7 +26,8 @@ def predictfun(filename1):
 
     forecast_ouptut=forecast[['ds','trend','yhat_lower','yhat_upper','yhat']]
 
-    filename="static/assets/data/predictoutjsondataNEW.json"
+    # filename="static/assets/data/predictoutjsondataNEW.json"
+    filename="static/assets/data/predictoutjsondata.json"
     print("--------------------------------",forecast_ouptut)
     forecast_ouptut.to_json(filename,orient='records')
 
